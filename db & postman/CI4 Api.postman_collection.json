@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "73aa59d0-f68a-4f83-84b1-6557d5f5fcd2",
+		"name": "CI4 Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Semua Barang",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/get-barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Semua Barang By ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3bc569ff2723ebc2319fb9f1eb9dccb51f716c051c993be7aba12e923d30ddc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/get-barang/(id)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-barang",
+						"(id)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@mail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "abogoboga",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert Barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama",
+							"value": "Bang krisno",
+							"type": "default"
+						},
+						{
+							"key": "satuan",
+							"value": "Hati",
+							"type": "default"
+						},
+						{
+							"key": "harga",
+							"value": "2000000000",
+							"type": "default"
+						},
+						{
+							"key": "gambar",
+							"type": "file",
+							"src": "/C:/Users/user/Pictures/ronaldo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/insert-barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"insert-barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3bc569ff2723ebc2319fb9f1eb9dccb51f716c051c993be7aba12e923d30ddc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "(id barang)",
+							"type": "default"
+						},
+						{
+							"key": "nama",
+							"value": "(nama barang)",
+							"type": "default"
+						},
+						{
+							"key": "satuan",
+							"value": "(satuan)",
+							"type": "default"
+						},
+						{
+							"key": "gambar",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "harga",
+							"value": "(harga)",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/update-barang",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"update-barang"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Barang berdasarkan status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get-barang?status=(0 atau 1)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-barang"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "(0 atau 1)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Barang berdasarkan key (cari)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get-barang?key=(keyword)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-barang"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "(keyword)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Barang",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/delete/(id)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"delete",
+						"(id)"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
